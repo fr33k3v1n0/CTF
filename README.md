@@ -1,2 +1,2 @@
 # CTF
-in this repo, we can get CTF writeup and tools i always use
+in this repo, you can get CTF writeup and tools i always use
