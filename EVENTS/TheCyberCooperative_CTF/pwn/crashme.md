@@ -21,6 +21,8 @@ by analyzing the source code, we can confirm that the program is vulnerable to B
 the var buffer can only take 31 char plus the null byte.
 but with the code at line 14, we can input more char than 32. 
 so let contact the remote server and exploit the bof
+<br>
+![](../images/crash3.png)
 
 so we get the flag:
 # flag{segfaults_a_hackers_best_friend}
