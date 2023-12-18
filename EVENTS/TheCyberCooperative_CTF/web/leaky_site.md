@@ -1,7 +1,10 @@
 ![](../images/leaky_site1.png)
-The source code of this chellence is very easy to understand. 
+
+
+<br/> <br>
+The source code of this chellenge is very easy to understand. 
 after visiting the website, we see this link. **https://thecybercoopctf-leaky-site.chals.io/index.php?resource=main_page**
-so the backend just take the resource(GET) parameter and include it  plus php extension as the file. i this point, i thing about local file inclusion and that is ok.
+so the backend just take the resource(GET) parameter and include it  plus php extension as the file. at this point, i thing about local file inclusion and that is ok.
 let try to include 
 # /etc/passwd
 - **payload**: ../../../../../../../../etc/passwd%00
