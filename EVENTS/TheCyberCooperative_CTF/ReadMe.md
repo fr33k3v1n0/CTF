@@ -1,4 +1,4 @@
-#hello and Welcome to the Cyber Cooperative's annual CTF event writeup !
+# hello and Welcome to the Cyber Cooperative's annual CTF event **writeup** !
 Start: December 14th, 11:01:00 PM (Central Standard Time)
 End: December 17th, 10:59:00 PM (Central Standard Time)
 
