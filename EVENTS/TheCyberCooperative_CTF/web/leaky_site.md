@@ -1,4 +1,4 @@
-![image](https://github.com/fr33k3v1n0/CTF/assets/106442162/08fcfc4a-3919-4592-8c18-bb09aa862fc3)![image](https://github.com/fr33k3v1n0/CTF/assets/106442162/35cf5914-7b96-42a6-85cb-a97826b2caea)1[](../images/leaky_site1.png)
+![](../images/leaky_site1.png)
 The source code of this chellence is very easy to understand. 
 after visiting the website, we see this link. **https://thecybercoopctf-leaky-site.chals.io/index.php?resource=main_page**
 so the backend just take the resource(GET) parameter and include it  plus php extension as the file. i this point, i thing about local file inclusion and that is ok.
