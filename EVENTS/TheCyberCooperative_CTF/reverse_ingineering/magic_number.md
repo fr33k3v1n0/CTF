@@ -1,4 +1,4 @@
-![](../images/magic1.png)
+![](../images/magic11.png)
 <br/>
 <br/>
 in this challenge, we are been given an ELF file. after analyzing and execute the file?.
