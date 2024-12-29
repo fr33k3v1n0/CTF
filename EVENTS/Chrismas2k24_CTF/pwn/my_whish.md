@@ -35,7 +35,7 @@ Elf 64-bit , ..., Not stripped so it will be easy for us to  reverse engeneering
 ```
 Deam , no mitigation found. that is a security risk .
 - The binary not has PIE:  the address of each symbole on .text section will be static for each time we launch the binary. 
-For exemple, we can now that each time we run the prog the main function will be at xxxxxx address.
+For example, we can know that each time we run the prog the main function will be at xxxxxx address.
 that make buffer overflow exploitation very easy.
 - It also don't deactivate a stack execution.
     with that, if we can inject shellcode on stack and make program jump to the location of our shellcode, we can execute it 
