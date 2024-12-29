@@ -66,7 +66,7 @@ grep "GET /[^ ]*\.html?" access.log | grep -v "lang"
 interesting:
 we have the param info wich contain encrypted data
 i copy "mr!,m`"  and use cyberchef magic option with inensive mode and i got  ``ls -al``
-![]("../images/cyberchef.png")
+![](../images/cyberchef.png)
 
 # it is xor with key= 1
 ```
