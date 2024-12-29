@@ -14,9 +14,9 @@ ELF 64-bits Least significante bit, Not stripped (so easy for reverse
 Usage : ./file_crypto [encrypt|decrypt] <filename>
 ```
 with that usage message, we can get a little ideal about the program work:
-decrypt of encrypt a file
+decrypt or encrypt a file
 
-when i try to decrypt the flag.encoded file, i can  an error message
+when i try to decrypt the flag.encoded file, i get  an error message
 ``` bash
 ./file_crypto decrypt  flag.encoded 
 Erreur : Vous ne pouvez pas déchiffrer ce fichier.
