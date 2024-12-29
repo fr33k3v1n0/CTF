@@ -35,10 +35,15 @@ when we use decrypt option, the program check:
 
 
 ** so with that, we know what we can do to decrypt the content of flag.encoded
+
 1 - rename flag.encoded to other name: ``` mv flag.encoded encoded_flag.txt```
+
 2 - create key.txt in the parent directory and input "chrismas2025" on it: ``` echo chrismas2025 > ../key.txt```
+
 3 set environment variable USER to "marie": ```export USER=marie"
+
 4 - now decrypt encoded_flag.txt: ```file_crypto decrypt encoded_flag.txt"```
+
 
 and we get the flag on decrypted.txt:
 # @flag: CMCTF{b4s364_f1l3_d3crypt0r_435}
